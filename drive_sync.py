@@ -25,7 +25,7 @@ def download_pdf_from_drive():
         
         request = service.files().get_media(fileId=FILE_ID)
         
-        # Descarga el archivo en memoria y lo guarda en disco
+        # Descarga el archivo en memoria 
         fh = io.FileIO(DOWNLOAD_PATH, mode='wb')
         downloader = MediaIoBaseDownload(fh, request)
         
@@ -42,5 +42,5 @@ def download_pdf_from_drive():
         return None
 
 if __name__ == "__main__":
-    # Para probar el script de forma independiente
+
     download_pdf_from_drive()

@@ -9,17 +9,17 @@ from rag_engine import update_vector_db, get_answer
 load_dotenv()
 
 # Configuración de la página web
-st.set_page_config(page_title="Asistente Corporativo IA", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="Banco Crea", page_icon="🏢", layout="wide")
 
-# --- BARRA LATERAL (Panel de Administración) ---
+# --- BARRA LATERAL
 st.sidebar.title("Configuración y Soporte")
 st.sidebar.markdown("---")
 
-# Sección de autenticación para el Administrador (Opción A)
+# Sección de autenticación para el Administrador 
 st.sidebar.subheader("🔐 Área de Administración")
 admin_password_input = st.sidebar.text_input("Contraseña de Admin", type="password")
 
-# Validamos la contraseña contra la definida en el archivo .env
+# Validamos la contraseña contra la definida en el archivo 
 if admin_password_input == os.getenv("ADMIN_PASSWORD"):
     st.sidebar.success("Acceso concedido")
     st.sidebar.markdown("Use el siguiente botón para sincronizar la base de conocimiento con el documento oficial en Google Drive.")
@@ -46,8 +46,8 @@ elif admin_password_input:
     st.sidebar.error("Contraseña incorrecta")
 
 # --- CUERPO PRINCIPAL (Chat del Usuario) ---
-st.title("🤖 Hola me llamo ALEJA asistente virtual de Banco Krea ")
-st.markdown("Bienvenido al sistema de consultas internas. Pregúntame sobre cualquier normativa, proceso o documentación oficial de la organización.")
+st.title("🏢 Banco Krea ")
+st.markdown("🧔🏼‍♀️ Hola me llamo ALEJA asistente virtual de Banco Krea.")
 st.markdown("---")
 
 # Verificar si la base de datos vectorial ya existe en el servidor
@@ -82,4 +82,151 @@ if user_query := st.chat_input("Escribe tu consulta aquí..."):
                 st.session_state.messages.append({"role": "assistant", "content": response})
             except Exception as e:
                 error_msg = f"Lo siento, ocurrió un error al procesar tu consulta: {e}"
-                st.markdown(error_msg)
+                st.markdown(error_msg),
+                import streamlit as st
+
+st.markdown("""
+<style>
+
+/* ===== Fondo principal ===== */
+.stApp{
+    background:
+        radial-gradient(circle at top right, rgba(37,99,235,0.35), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(14,165,233,0.20), transparent 35%),
+        linear-gradient(135deg,#071426 0%,#0B1F3A 45%,#123A6D 100%);
+    background-attachment: fixed;
+}
+            
+            /* ======= Barra Lateral =====*/
+section[data-testid="stSidebar"]{
+    min-width:420px !important;
+    max-width:420px !important;
+    background: rgba(8,18,35,.92);
+    backdrop-filter: blur(18px);
+}
+
+section[data-testid="stSidebar"] > div{
+    width:420px !important;
+}
+
+.titulo-principal{
+    color:white;
+    font-size:70px;
+    font-weight:800;
+    margin-left:300px;
+}
+/* Subtítulo */
+.subtitulo{
+    color:#E2E8F0;
+    font-size:22px;
+    font-weight:600;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* Título de la barra lateral */
+.titulo-sidebar{
+    color:white;
+    font-size:38px;
+    font-weight:800;
+    text-align:center;
+}
+
+/* Área de administración */
+.titulo-admin{
+    color:white;
+    font-size:28px;
+    font-weight:700;
+}
+
+/* Texto normal */
+.descripcion{
+    color:#d1d5db;
+    font-size:18px;
+}
+}
+
+/* ===== Texto ===== */
+p,span,label{
+    color:#E2E8F0 !important;
+    font-size:16px;
+}
+
+/* ===== Tarjetas ===== */
+div[data-testid="stVerticalBlock"]{
+    background:rgba(255,255,255,.04);
+    border-radius:18px;
+    padding:15px;
+}
+
+/* ===== Chat ===== */
+.stChatMessage{
+    background:rgba(255,255,255,.07);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:10px;
+}
+
+/* Contenedor principal */
+[data-testid="stChatInput"]{
+    max-width: 900px !important;
+    margin: auto !important;
+}
+
+/* Contenedor interno */
+[data-testid="stChatInput"] > div{
+    max-width: 900px !important;
+    margin: auto !important;
+}
+}
+
+/* ===== Botones ===== */
+.stButton>button{
+    background:linear-gradient(90deg,#1D4ED8,#2563EB,#3B82F6);
+    color:white;
+    border:black;
+    border-radius:10px;
+    padding:10px 10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.stButton>button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(37,99,235,.45);
+}
+
+/* ===== Inputs ===== */
+input{
+    border-radius:12px !important;
+}
+
+/* ===== Alertas ===== */
+.stAlert{
+    border-radius:15px;
+}
+
+/* ===== Scroll ===== */
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563EB;
+    border-radius:10px;
+}
+            /* Campo de contraseña */
+.stTextInput{
+    max-width: 320px;
+}
+
+.stTextInput > div > div > input{
+    height: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+</style>
+""", unsafe_allow_html=True)
