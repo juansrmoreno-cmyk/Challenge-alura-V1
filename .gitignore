@@ -1,0 +1,16 @@
+# Variables de entorno
+.env
+
+# Credenciales Google
+credentials.json
+
+# Entorno virtual
+venv/
+.venv/
+
+# Base vectorial
+vector_db/
+
+# Archivos temporales
+__pycache__/
+*.pyc
