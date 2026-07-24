@@ -11,7 +11,7 @@ load_dotenv()
 
 # Configuración
 SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
-FILE_ID = '19_fb-Gx2eGIS2bsCjb3gPjLYru-vtNeA'
+FILE_ID = '1Fi4BTt1UHzfNmHvAsq0LP6vntduW7yMj'
 DOWNLOAD_PATH = 'documento_empresa.pdf'
 
 
