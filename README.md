@@ -1,4 +1,6 @@
+
 BANCO KREA
+
 Aleja es un asistente Inteligente basado en Inteligencia Artificial y Arquitectura RAG para responder consultas sobre la documentación del Banco Krea.
 
 📖 INDICE
@@ -126,21 +128,19 @@ Google Gemini
 
 Respuesta
 
- 📂 ESTRUCTURA DEL PROYECTO
+📂 Estructura del proyecto
 
-Archivo / Carpeta	Descripción
-app.py	Archivo principal de la aplicación. Contiene la interfaz desarrollada en Streamlit y gestiona la interacción entre el usuario y el sistema RAG.
-rag_engine.py	Implementa la lógica del sistema RAG (Retrieval-Augmented Generation), incluyendo la creación de embeddings, la búsqueda en la base vectorial FAISS y la generación de respuestas mediante Google Gemini.
-drive_sync.py	Se encarga de conectarse a Google Drive y descargar automáticamente el documento PDF que servirá como base de conocimiento del asistente.
-docs/	Carpeta donde se almacenan los documentos PDF utilizados por el sistema como fuente de información.
-vector_db/	Contiene la base de datos vectorial generada con FAISS, utilizada para realizar búsquedas semánticas sobre el contenido de los documentos.
-requirements.txt	Archivo que lista todas las dependencias y bibliotecas necesarias para ejecutar correctamente el proyecto.
-.env.example	Plantilla con las variables de entorno requeridas para configurar la aplicación sin exponer información confidencial.
-.gitignore	Define los archivos y carpetas que Git debe ignorar para evitar subir información sensible o archivos temporales al repositorio.
-credentials.json	Archivo con las credenciales de la cuenta de servicio de Google Cloud necesarias para acceder a Google Drive. No debe incluirse en el repositorio.
-assets/	Carpeta destinada a almacenar imágenes, logotipos, capturas de pantalla y otros recursos gráficos utilizados en la aplicación o en el README.
-README.md	Documento que describe el proyecto, su funcionamiento, instalación, tecnologías utilizadas y guía de uso para otros desarrolladores.
-pycache/	Carpeta generada automáticamente por Python para almacenar archivos compilados, mejorando el rendimiento de la aplicación.
-
+| 📁 Archivo / Carpeta | 📄 Descripción |
+|----------------------|----------------|
+| `app.py` | Punto de entrada de la aplicación. Contiene la interfaz desarrollada con **Streamlit** y gestiona la interacción con el usuario. |
+| `rag_engine.py` | Implementa la arquitectura **RAG**, realiza la búsqueda semántica en FAISS y genera respuestas utilizando **Google Gemini**. |
+| `drive_sync.py` | Descarga y sincroniza automáticamente el documento PDF almacenado en Google Drive. |
+| `docs/` | Contiene la documentación del Banco Krea utilizada como fuente de conocimiento del asistente. |
+| `vector_db/` | Almacena la base de datos vectorial generada por **FAISS** para realizar búsquedas semánticas. |
+| `requirements.txt` | Lista todas las dependencias necesarias para ejecutar el proyecto. |
+| `.env.example` | Archivo de ejemplo con las variables de entorno requeridas para la configuración. |
+| `.gitignore` | Define los archivos y carpetas que Git debe ignorar para proteger información sensible y archivos temporales. |
+| `assets/` | Carpeta destinada a imágenes, capturas de pantalla y demás recursos utilizados en el README. |
+| `README.md` | Documentación principal del proyecto, incluyendo instalación, uso y tecnologías empleadas. |
  
 
