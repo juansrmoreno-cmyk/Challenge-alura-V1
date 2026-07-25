@@ -66,10 +66,11 @@ Actualmente el proyecto cuenta con las siguientes funcionalidades implementadas:
 
  📷 DEMOSTRACION
  
- contenido en carpeta prueba
+ contenido en carpeta Demostraciones
 
 📁 ACCESO AL PROYECTO 
 https://github.com/juansrmoreno-cmyk/Challenge-alura-V1/tree/master
+ADMIN_PASSWORD= Bancokrea1*
 
 🔗LINK DEL PROYECTO 
 https://challenge-alura-v1.streamlit.app/
